@@ -4,27 +4,20 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-
-import it.unimi.dsi.fastutil.objects.ObjectIterator;
-
 import java.util.Random;
 
 import com.apocfarce.minestuck_alternia.world.gen.structure.Components.AlterniaVillageStart;
 import com.apocfarce.minestuck_alternia.world.gen.structure.Components.Path;
 
 import net.minecraft.init.Biomes;
-import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.ChunkPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.structure.MapGenStructure;
-import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
 import net.minecraft.world.gen.structure.StructureStart;
-import net.minecraft.world.gen.structure.template.TemplateManager;
 
 public class AlterniaVillageGen extends MapGenStructure
 {
@@ -124,7 +117,7 @@ public class AlterniaVillageGen extends MapGenStructure
             {
                 super(chunkx, chunkz);
                 List<PieceWeight> list = AlterniaVillageComponent.getStructureVillageWeightedPieceList(rand, size);
-                AlterniaVillageStart Alterniapieces$start = new AlterniaVillageStart(worldIn.getBiomeProvider(), 0, rand, (chunkx << 4) + 2, (chunkz << 4) + 2, list, size);
+                AlterniaVillageStart Alterniapieces$start = new AlterniaVillageStart(worldIn, 0, rand, (chunkx << 4) + 2, (chunkz << 4) + 2, list, size);
                 this.components.add(Alterniapieces$start);
                 Alterniapieces$start.buildComponent(Alterniapieces$start, this.components, rand);
                 List<StructureComponent> list1 = Alterniapieces$start.pendingRoads;

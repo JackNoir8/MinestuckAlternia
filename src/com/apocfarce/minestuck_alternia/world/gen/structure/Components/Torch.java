@@ -7,13 +7,11 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-import net.minecraft.world.gen.structure.StructureVillagePieces;
 
-public class Torch extends VillageComponentInterface
+public class Torch extends VillageSComponent
 {
     public Torch()
     {
@@ -38,16 +36,16 @@ public class Torch extends VillageComponentInterface
      */
     public boolean addComponentParts(World worldIn, Random randomIn, StructureBoundingBox structureBoundingBoxIn)
     {
-        if (this.averageGroundLvl < 0)
+        if (this.GetAverageGroundLvl() < 0)
         {
-            this.averageGroundLvl = this.getAverageGroundLevel(worldIn, structureBoundingBoxIn);
+            this.averageGroundLvl=this.getAverageGroundLevel(worldIn, structureBoundingBoxIn);
 
-            if (this.averageGroundLvl < 0)
+            if (this.GetAverageGroundLvl() < 0)
             {
                 return true;
             }
 
-            this.boundingBox.offset(0, this.averageGroundLvl - this.boundingBox.maxY + 4 - 1, 0);
+            this.boundingBox.offset(0, this.GetAverageGroundLvl() - this.boundingBox.maxY + 4 - 1, 0);
         }
 
         IBlockState iblockstate = this.getBiomeSpecificBlockState(Blocks.OAK_FENCE.getDefaultState());

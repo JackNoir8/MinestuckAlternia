@@ -11,10 +11,9 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-import net.minecraft.world.gen.structure.StructureVillagePieces;
 
 
-public class Well extends VillageComponentInterface
+public class Well extends VillageSComponent
     {
         public Well()
         {
@@ -95,5 +94,7 @@ public class Well extends VillageComponentInterface
 
             return true;
         }
+
+
     }
 

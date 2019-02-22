@@ -14,11 +14,10 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.structure.StructureBoundingBox;
 import net.minecraft.world.gen.structure.StructureComponent;
-import net.minecraft.world.gen.structure.StructureVillagePieces;
 import net.minecraft.world.gen.structure.template.TemplateManager;
 
 
-public class Path extends VillageComponentInterface
+public class Path extends VillageSComponent
 {
    
        private int length;
@@ -38,7 +37,7 @@ public class Path extends VillageComponentInterface
        /**
         * (abstract) Helper method to write subclass data to NBT
         */
-       protected void writeStructureToNBT(NBTTagCompound tagCompound)
+       public void writeStructureToNBT(NBTTagCompound tagCompound)
        {
            super.writeStructureToNBT(tagCompound);
            tagCompound.setInteger("Length", this.length);
@@ -47,7 +46,7 @@ public class Path extends VillageComponentInterface
        /**
         * (abstract) Helper method to read subclass data from NBT
         */
-       protected void readStructureFromNBT(NBTTagCompound tagCompound, TemplateManager p_143011_2_)
+       public void readStructureFromNBT(NBTTagCompound tagCompound, TemplateManager p_143011_2_)
        {
            super.readStructureFromNBT(tagCompound, p_143011_2_);
            this.length = tagCompound.getInteger("Length");

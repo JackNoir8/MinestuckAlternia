@@ -74,7 +74,6 @@ public class AlterniaVillageComponent {
 	{
         Class <? extends VillageComponentInterface > oclass = weight.villagePieceClass;
         VillageComponentInterface AlterniaVillageComponent$village = null;
-        StructureBoundingBox boundingBox;
         if (oclass == Church.class)
         {            
         	AlterniaVillageComponent$village = Church.createPiece(start, structureComponents, rand, structureMinX, structureMinY, structureMinZ, facing, componentType);
@@ -152,10 +151,9 @@ public class AlterniaVillageComponent {
 		}
 		else if (Math.abs(structureMinX - start.getBoundingBox().minX) <= 112 && Math.abs(structureMinZ - start.getBoundingBox().minZ) <= 112)
 		{
-			StructureComponent structurecomponent = generateComponent(start, structureComponents, rand, structureMinX, structureMinY, structureMinZ, facing, componentType + 1);
-			
-			if (structurecomponent != null)
-			{
+			VillageComponentInterface component= generateComponent(start, structureComponents, rand, structureMinX, structureMinY, structureMinZ, facing, componentType + 1);
+			if(component instanceof StructureComponent) {
+				StructureComponent structurecomponent = (StructureComponent)component;
 				structureComponents.add(structurecomponent);
 				start.pendingHouses.add(structurecomponent);
 				return structurecomponent;
