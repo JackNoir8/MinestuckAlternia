@@ -77,9 +77,4 @@ public class AlterniaItems
 		registry.register(item.setRegistryName(item.getBlock().getRegistryName()));
 		return item;
 	}
-	private static Item[] RegisterArray(IForgeRegistry<Item> registry, Item[] items) {
-
-		
-		return items;
-	}
 }

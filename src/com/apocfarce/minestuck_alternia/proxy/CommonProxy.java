@@ -3,11 +3,8 @@ package com.apocfarce.minestuck_alternia.proxy;
 import com.apocfarce.minestuck_alternia.block.AlterniaBlocks;
 import com.apocfarce.minestuck_alternia.client.util.ModdleManager;
 import com.apocfarce.minestuck_alternia.item.AlterniaItems;
-import com.apocfarce.minestuck_alternia.world.gen.structure.AlterniaChunkGen;
-import com.apocfarce.minestuck_alternia.world.gen.structure.AlterniaVillageComponent;
 
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public abstract class CommonProxy {
 
@@ -16,8 +13,6 @@ public abstract class CommonProxy {
 		MinecraftForge.EVENT_BUS.register(AlterniaBlocks.class);
 		MinecraftForge.EVENT_BUS.register(AlterniaItems.class);
 		MinecraftForge.EVENT_BUS.register(ModdleManager.class);
-		GameRegistry.registerWorldGenerator(new AlterniaChunkGen(), 3);
-		AlterniaVillageComponent.registerAlterniaVillageComponents();
 		//MinecraftForge.EVENT_BUS.register(BiomeAlternia.class);
 		
 		//AlterniaSoundHandler.initSound();
