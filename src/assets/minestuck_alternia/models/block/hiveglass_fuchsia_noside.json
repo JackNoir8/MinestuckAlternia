@@ -1,0 +1,6 @@
+{
+    "parent": "block/pane_noside",
+    "textures": {
+        "pane": "minestuck_alternia:blocks/hiveglass_fuchsia"
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "GGG",
+    "BBB"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:bread"
+    },
+    "G": {
+      "item": "minecraft:porkchop"
+    }
+  },
+  "result": {
+    "item": "minestuck_alternia:oblong_meat_product"
+  }
+}

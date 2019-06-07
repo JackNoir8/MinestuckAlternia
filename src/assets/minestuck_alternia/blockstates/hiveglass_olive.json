@@ -1,0 +1,29 @@
+{
+    "multipart": [
+        {   "apply": { "model": "minestuck_alternia:hiveglass_olive_post" }},
+        {   "when": { "north": true },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_side" }
+        },
+        {   "when": { "east": true },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_side", "y": 90 }
+        },
+        {   "when": { "south": true },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_side_alt" }
+        },
+        {   "when": { "west": true },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_side_alt", "y": 90 }
+        },
+        {   "when": { "north": false },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_noside" }
+        },
+        {   "when": { "east": false },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_noside_alt" }
+        },
+        {   "when": { "south": false },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_noside_alt", "y": 90 }
+        },
+        {   "when": { "west": false },
+            "apply": { "model": "minestuck_alternia:hiveglass_olive_noside", "y": 270 }
+        }
+    ]
+}

@@ -20,3 +20,13 @@ build
 # other
 eclipse
 run
+*.lock
+*.mca
+usercache.json
+usernamecache.json
+*.txt
+*.gz
+*.cfg
+*.dat
+*.properties
+saves/*

@@ -1,0 +1,7 @@
+{
+    "parent": "block/pane_side_alt",
+    "textures": {
+        "edge": "minestuck_alternia:blocks/hiveglass_gold",
+        "pane": "minestuck_alternia:blocks/hiveglass_gold"
+    }
+}
